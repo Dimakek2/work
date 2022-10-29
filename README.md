@@ -20,4 +20,4 @@ https://wordpress.com/me
 
 Код двойного отрицания (\overline {\overline{A}}=A)
 
-
+$(\overline {\overline{A}}=A)$
