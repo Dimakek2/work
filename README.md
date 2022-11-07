@@ -21,3 +21,7 @@ https://wordpress.com/me
 Код двойного отрицания (\overline {\overline{A}}=A)
 
 $(\overline {\overline{A}}=A)$
+
+\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)}}+a_1^2+\beta_1^2
+
+$\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)}}+a_1^2+\beta_1^2$
