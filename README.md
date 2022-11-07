@@ -22,6 +22,6 @@ https://wordpress.com/me
 
 $(\overline {\overline{A}}=A)$
 
-\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)}}+a_1^2+\beta_1^2
+\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)x}}+a_1^2+\beta_1^2
 
-$\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)}}+a_1^2+\beta_1^2$
+$\bar E_0^2=\sqrt{\frac{Fa_0^2}{(x-1)x}}+a_1^2+\beta_1^2$
