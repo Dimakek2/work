@@ -1,0 +1,150 @@
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+root.title("Викторина")
+root.geometry("250x250")
+clicks = 0
+def dismiss(window):
+    window.grab_release()
+    window.destroy()
+def a():
+    root.grab_release()
+    root.destroy()
+def w():
+    global clicks
+    clicks += 1
+
+    Label = ttk.Label(text=F"Баллы = {clicks}")
+    Label.pack()
+
+def click():
+
+    def r():
+        q = Toplevel()
+        q.title("Вопросики")
+        q.geometry("300x300")
+        Label = ttk.Label(q, text="                  Вопрос 2\nСколько битов в килобайте?",
+                          font="Arial 11 normal roman")
+        Label.pack()
+        window.grab_release()
+        window.destroy()
+
+        def x():
+            a = Toplevel()
+            a.title("Вопросики")
+            a.geometry("300x300")
+            Label = ttk.Label(a, text="                  Вопрос 3\nСумма углов треугольника:",
+                              font="Arial 11 normal roman")
+            Label.pack()
+            q.grab_release()
+            q.destroy()
+
+            def c():
+                s = Toplevel()
+                s.title("Вопросики")
+                s.geometry("300x300")
+                Label = ttk.Label(s, text="                  Вопрос 4\nСтолица Франции?",
+                                  font="Arial 11 normal roman")
+                Label.pack()
+                a.grab_release()
+                a.destroy()
+
+                def v():
+                    d = Toplevel()
+                    d.title("Вопросики")
+                    d.geometry("1000x300")
+                    Label = ttk.Label(d, text="                  Вопрос 5\nЧто такое скорость?",
+                                      font="Arial 11 normal roman")
+                    Label.pack()
+                    s.grab_release()
+                    s.destroy()
+
+                    def b():
+                        d.grab_release()
+                        d.destroy()
+
+                    btn = ttk.Button(d, text="Не векторная величина", command=b)
+                    btn.pack(expand=True, ipadx=1, ipady=1)
+                    btn.place(relx=0.6, rely=0.5)
+                    btn = ttk.Button(d, text="Сколярная величина", command=b)
+                    btn.pack(expand=True, ipadx=1, ipady=1)
+                    btn.place(relx=0.1, rely=0.5)
+                    btn = ttk.Button(d, text="Показывать путь тела за единицу вермени", command=lambda: (b(), w()))
+                    btn.pack(expand=True, ipadx=1, ipady=1)
+                    btn.place(relx=0.6, rely=0.7)
+                    btn = ttk.Button(d, text="Все сразу", command=b)
+                    btn.pack(expand=True, ipadx=1, ipady=1)
+                    btn.place(relx=0.1, rely=0.7)
+
+                btn = ttk.Button(s, text="Парыж", command=v)
+                btn.pack(expand=True, ipadx=1, ipady=1)
+                btn.place(relx=0.6, rely=0.5)
+                btn = ttk.Button(s, text="Бордо", command=v)
+                btn.pack(expand=True, ipadx=1, ipady=1)
+                btn.place(relx=0.1, rely=0.5)
+                btn = ttk.Button(s, text="Париж", command=lambda: (v(), w()))
+                btn.pack(expand=True, ipadx=1, ipady=1)
+                btn.place(relx=0.6, rely=0.7)
+                btn = ttk.Button(s, text="Прованс", command=v)
+                btn.pack(expand=True, ipadx=1, ipady=1)
+                btn.place(relx=0.1, rely=0.7)
+
+            btn = ttk.Button(a, text="160", command=c)
+            btn.pack(expand=True, ipadx=1, ipady=1)
+            btn.place(relx=0.6, rely=0.5)
+            btn = ttk.Button(a, text="360", command=c)
+            btn.pack(expand=True, ipadx=1, ipady=1)
+            btn.place(relx=0.1, rely=0.5)
+            btn = ttk.Button(a, text="180", command=lambda: (c(), w()))
+            btn.pack(expand=True, ipadx=1, ipady=1)
+            btn.place(relx=0.6, rely=0.7)
+            btn = ttk.Button(a, text="240", command=c)
+            btn.pack(expand=True, ipadx=1, ipady=1)
+            btn.place(relx=0.1, rely=0.7)
+
+
+
+        btn = ttk.Button(q, text="500", command=x )
+        btn.pack(expand=True, ipadx=1, ipady=1)
+        btn.place(relx=0.6, rely=0.5)
+        btn = ttk.Button(q, text="9999", command=x)
+        btn.pack(expand=True, ipadx=1, ipady=1)
+        btn.place(relx=0.1, rely=0.5)
+        btn = ttk.Button(q, text="8024", command=x)
+        btn.pack(expand=True, ipadx=1, ipady=1)
+        btn.place(relx=0.6, rely=0.7)
+        btn = ttk.Button(q, text="8000", command=lambda:(x(),w()))
+        btn.pack(expand=True, ipadx=1, ipady=1)
+        btn.place(relx=0.1, rely=0.7)
+
+    window = Toplevel()
+    window.title("Вопросики")
+    window.geometry("300x300")
+    Label = ttk.Label(window,text="                  Вопрос 1\nВ каком месяце нет 31 дня?",font="Arial 11 normal roman")
+    Label.pack()
+    btn = ttk.Button(window,text="Февраль",command=lambda:(r(),w()))
+    btn.pack(expand=True, ipadx=1, ipady=1)
+    btn.place(relx=0.6, rely=0.5)
+    btn = ttk.Button(window, text="Декабрь",command=r)
+    btn.pack(expand=True, ipadx=1, ipady=1)
+    btn.place(relx=0.1, rely=0.5)
+    btn = ttk.Button(window, text="Январь",command=r)
+    btn.pack(expand=True, ipadx=1, ipady=1)
+    btn.place(relx=0.6, rely=0.7)
+    btn = ttk.Button(window, text="Август",command=r)
+    btn.pack(expand=True, ipadx=1, ipady=1)
+    btn.place(relx=0.1, rely=0.7)
+
+
+
+
+Label = ttk.Label(text="")
+Label.pack()
+btn = ttk.Button(text="Начать", command=click)
+btn.pack(expand=True, ipadx=1, ipady=1)
+a = ttk.Button(text="Выйти", command=a)
+a.pack(expand=True, ipadx=1, ipady=1)
+
+
+root.mainloop()
