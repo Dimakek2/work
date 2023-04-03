@@ -1,0 +1,27 @@
+Провеояет список на деление на 2 и сортирует переменные в порядке возрастания
+
+print("Если все цифры введены напишите: готово")
+print("Введите количесвто пременных:")
+x = int(input())
+print("Введите переменных которые нужно отсортировать:")
+q=0
+w=0
+sob = []
+for z in range(x):
+    sob.append(int(input()))
+    for i in range(len(sob)-1):
+            for i in range(len(sob) - 1):
+                if sob[i]>sob[i+1]:
+                    count = sob[i]
+                    sob[i] = sob[i+1]
+                    sob[i+1] = count
+for i in range(len(sob)):
+        if sob[i]%2==0:
+            q+=1
+        else:
+            w+=1
+print(q,       w,"\n")
+print(q//2+w//2,"\n")
+print (sob,"\n")
+
+
