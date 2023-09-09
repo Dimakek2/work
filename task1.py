@@ -52,9 +52,10 @@ for i in range(0,len(c),2):
     print(c[i],c[i+1])
 
 
-
-
-
+import fnmatch
+for i in range(0, 10**10+1, 2024):
+    if fnmatch.fnmatchcase(str(i), '1?2157*4'):
+        print(i, i//2024)
 
 
 
